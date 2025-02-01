@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Star Wars Questionnaire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+  
+  <!--Hey future me! We're currently working on making sure everything is responsive and will scale properly! -->
+  
+  <body>
+    
+    <div id="wrapper">
+      <div id="intro">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/star-wars-gettyimages-607433620.jpg" alt-text="A Star Wars poster from A New Hope">
+      <h1 id="title">Star Wars Questionnaire</h1>
+      <p id="description">This survey is meant to explore people’s general familiarity and opinions on Star Wars in the current day.</p>
+      </div>
+      <!--End intro block-->
+      <!--Form begins-->
+      <form method="post" action='https://register-demo.freecodecamp.org' id="survey-form">
+        <!--Name/Age/Email block begins-->
+        <!--
+  label for="phone">Enter a phone number:</label><br><br>
+    <input type="tel" id="phone" name="phone" placeholder="123-45-678" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}"><br><br>
+    <small>Format: 123-45-678</small><br><br>
+    <input type="submit">
+  -->
+        <fieldset>
+        <label id="name-label"for="name-label"><h2>Name</h2></label> 
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+  
+      <hr>
+      <label id="number-label" for="ageInput"><h2>Age</h2></label> 
+        <input type="number" id="number" name="ageInput" placeholder="Enter your age" min="7" max="120"required>
+        
+      <hr>
+     <label id="email-label" for="emailInput"><h2>Email</h2></label> 
+        <p class="subtitle">So we can talk about all our favorite (and least favorite) moments</p>
+        <input type="email" id="email" name="emailInput" placeholder="skywalker@lucasfilm.com" required>
+        </fieldset>
+        
+      <hr>
+  <!--Familiarity Slider section begins-->       
+        <fieldset>
+      <h2>How familiar are you with the Star Wars movies?</h2>
+   
+        <div class="slider-container">
+          <input type="range" min="1" max="10" step="1" value="5" class="slider" id="myRange">
+          <div class="ticks">
+              <span class="tick">1</span>
+              <span class="tick">2</span>
+              <span class="tick">3</span>
+              <span class="tick">4</span>
+              <span class="tick">5</span>
+              <span class="tick">6</span>
+              <span class="tick">7</span>
+              <span class="tick">8</span>
+              <span class="tick">9</span>
+              <span class="tick">10</span>
+          </div>
+      </div> 
+        </fieldset>
+  <!--Familiarity Slider section ends-->       
+        
+      <hr>
+  <!--Amount of Movies Seen section begins-->      
+        <fieldset>
+          <h2>What mainline movies have you seen?</h2>
+          <div class="buttons">
+      
+    
+    <label for="episode1"> <input id="episode1" type="checkbox" name="seenMovies" value="episode1"> Star Wars: The Phantom Menace (Episode I)  </label> 
+      <label for="episode2"><input id="episode2" type="checkbox" name="seenMovies" value="episode2"> Star Wars: Attack of the Clones (Episode II)</label> 
+      <label for="episode3"><input id="episode3" type="checkbox" name="seenMovies" value="episode3"> Star Wars: Revenge of the Sith (Episode III)</label> 
+      <label for="episode4"> <input id="episode4" type="checkbox" name="seenMovies" value="episode4">Star Wars: A New Hope (Episode IV) </label>
+       <label for="episode5"><input id="episode5" type="checkbox" name="seenMovies" value="episode5" > Star Wars: The Empire Strikes Back (Episode V)</label> 
+      <label for="episode6"><input id="episode6" type="checkbox" name="seenMovies" value="episode6"> Star Wars: Return of the Jedi (Episode VI)</label>
+      <label for="episode7"><input id="episode7" type="checkbox" name="seenMovies" value="episode7"> Star Wars: The Force Awakens (Episode VII)</label>
+      <label for="episode8"><input id="episode8" type="checkbox" name="seenMovies" value="episode8" > Star Wars: The Last Jedi (Episode VIII)</label>
+      <label for="episode9"><input id="episode9" type="checkbox" name="seenMovies" value="episode9" > Star Wars: The Rise of Skywalker (Episode IX)</label> 
+      <label for="neverSeen"><input id="neverSeen" type="checkbox" name="seenMovies" value="neverSeen" > I’ve never seen any of these</label>
+          <div>
+        </fieldset>
+  <!--Amount of Movies Seen section begins--> 
+      <hr>
+  <!--Favorite trilogy section begins-->          
+      <fieldset>
+      <h2>Which trilogy is your favorite overall?</h2>
+               <select id="dropdown" name="favoriteTrilogy">
+              <option value="">(select one)</option>
+              <option value="1">The Prequel Trilogy (Episodes I, II, III)</option>
+              <option value="2">The Original Trilogy (Episodes IV, V, VI)</option>
+              <option value="3"> The Sequel Trilogy (Episodes VII, VIII, IX) </option>
+            </select>
+        <hr>
+      </fieldset>
+  <!--Favorite trilogy section ends-->    
+            
+  <!--Favorite movie section begins-->          
+      <fieldset>
+       
+        <h2>Which movie is your favorite?</h2>
+         <div class="buttons">
+          <label for="episode1"><input id="episode1" value="episode1" type="radio" name="favoriteMovie" checked /> Star Wars: The Phantom Menace (Episode I)</label>
+          <label for="episode2"><input id="episode2" value="episode2" type="radio" name="favoriteMovie"  /> Star Wars: Attack of the Clones (Episode II)</label>
+        <label for="episode3"><input id="episode3" value="episode3" type="radio" name="favoriteMovie"  /> Star Wars: Revenge of the Sith (Episode III)</label>
+        <label for="episode4"><input id="episode4" value="episode4" type="radio" name="favoriteMovie"  /> Star Wars: A New Hope (Episode IV)</label>
+        <label for="episode5"><input id="episode5" value="episode5" type="radio" name="favoriteMovie"  /> Star Wars: The Empire Strikes Back (Episode V)</label>
+        <label for="episode6"><input id="episode6" type="radio" name="favoriteMovie" value="episode6"  /> Star Wars: Return of the Jedi (Episode VI)</label>
+        <label for="episode7"><input id="episode7" value="episode7" type="radio" name="favoriteMovie"  /> Star Wars: The Force Awakens (Episode VII)</label>
+        <label for="episode8"><input id="episode8" value="episode8" type="radio" name="favoriteMovie"  /> Star Wars: The Last Jedi (Episode VIII)</label>
+        <label for="episode9"><input id="episode9" type="radio" value="episode9" name="favoriteMovie"  /> Star Wars: The Rise of Skywalker (Episode IX)</label>
+        <label for="neverSeen"><input id="neverSeen" value="neverSeen" type="radio" name="favoriteMovie"  /> I've never seen any of these</label>
+        </div>
+        <label for="favorite-why"><h2>Give a brief description of why it's your favorite Star Wars film</h2></label> 
+        <textarea id="favorite-comments" class="input-textarea" name="comment" placeholder="Talk about the characters, the design, the script, the music - whatever makes it special to you!"></textarea>
+        <hr>
+        </fieldset>
+  <!--Favorite movie section ends--> 
+            
+  <!--Least favorite movie section begins-->
+            <fieldset>
+        <div class="buttons">
+        <h2>Which movie is your least favorite?</h2>
+          <label for="episode1"><input id="episode1LF" value="episode1" type="radio" name="leastFavoriteMovie"  checked /> Star Wars: The Phantom Menace (Episode I)</label>
+          <label for="episode2"><input id="episode2LF" value="episode2" type="radio" name="leastFavoriteMovie"  /> Star Wars: Attack of the Clones (Episode II)</label>
+        <label for="episode3"><input id="episode3LF" type="radio" value="episode3" name="leastFavoriteMovie"  /> Star Wars: Revenge of the Sith (Episode III)</label>
+        <label for="episode4"><input id="episode4LF" value="episode4" type="radio" name="leastFavoriteMovie"  /> Star Wars: A New Hope (Episode IV)</label>
+        <label for="episode5"><input id="episode5LF" value="episode5" type="radio" name="leastFavoriteMovie"  /> Star Wars: The Empire Strikes Back (Episode V)</label>
+        <label for="episode6"><input id="episode6LF" value="episode6" type="radio" name="leastFavoriteMovie"  /> Star Wars: Return of the Jedi (Episode VI)</label>
+        <label for="episode7"><input id="episode7LF" value="episode7" type="radio"name="leastFavoriteMovie"  /> Star Wars: The Force Awakens (Episode VII)</label>
+        <label for="episode8"><input id="episode8LF" value="episode8" type="radio" name="leastFavoriteMovie"  /> Star Wars: The Last Jedi (Episode VIII)</label>
+        <label for="episode9"><input id="episode9LF" value="episode9" type="radio" name="leastFavoriteMovie"  /> Star Wars: The Rise of Skywalker (Episode IX)</label>
+        <label for="neverSeen"><input id="neverSeenLF" value="neverSeen" type="radio" name="leastFavoriteMovie"  /> I've never seen any of these</label>
+        </div>
+        <label for="favorite-why"><h2>Give a brief description of why it's your least favorite Star Wars film</h2></label> 
+        <textarea id="favorite-comments" class="input-textarea" name="comment" placeholder="Talk about aspects you didn’t like. Let me know your true feelings. Did it make your blood boil? Were you just bored? Or anything in between?"></textarea>
+        </fieldset>
+  <!--Least favorite movie section ends-->
+            <hr>
+            <!--End card + submit button-->
+            
+            <p class="subtitle">Thank you for fillling out this questionnaire!</p>
+            <input type="submit" id="submit" value="Submit" />
+  
+      </form>
+      
+  </body>
+
+</html>
